@@ -1,1 +1,93 @@
-<h1>WEbsite</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>77Z Website</title>
+    <meta name="title" content="77Z, thats me">
+    <meta name="description" content="I like code.">
+
+    <!-- Robots -->
+    <meta name="author" content="77Z">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="shadow, engine, shadow-engine, shadow engine, 77Z, vince">
+
+    <!-- General Meta -->
+    <meta name="language" content="English">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://77zsite.tk">
+    <meta property="og:title" content="77Z, thats me">
+    <meta property="og:description" content="I like code.">
+    <meta property="og:image" content="https://shadow.77zsite.tk/img/social-preview.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://77zsite.tk">
+    <meta property="twitter:title" content="77Z, thats me">
+    <meta property="twitter:description" content="I like code.">
+    <meta property="twitter:image" content="https://shadow.77zsite.tk/img/social-preview.png">
+    <style>
+        body,
+        html {
+            background: #222;
+            color: #fff;
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            user-select: none;
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .logo-container img {
+            max-width: 400px;
+        }
+
+        .overlay {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            z-index: 2;
+        }
+
+        .social-icons {
+            position: fixed;
+            width: 100%;
+            top: 80%;
+            text-align: center;
+            z-index: 3;
+        }
+
+        .social-icons img {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="logo-container">
+        <img src="res/logo.svg" alt="77Z Logo">
+    </div>
+    <div class="overlay"></div>
+    <div class="social-icons">
+        <a href="https://github.com/77Z"><img src="res/GitHubMark.svg" alt="GitHub Logo" width="50"></a>
+        <a href="https://Shadow.77Zsite.tk"><img
+                src="https://raw.githubusercontent.com/77Z/Shadow-Engine/master/media/img/icons/shadowengine.png"
+                alt="Shadow Engine Logo" width="50"></a>
+    </div>
+</body>
+
+</html>
