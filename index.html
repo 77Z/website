@@ -2,92 +2,129 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>77Z Website</title>
-    <meta name="title" content="77Z, thats me">
-    <meta name="description" content="I like code.">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>77Z Website</title>
+	<meta name="title" content="77Z, thats me">
+	<meta name="description" content="I like code.">
 
-    <!-- Robots -->
-    <meta name="author" content="77Z">
-    <meta name="robots" content="index, follow">
-    <meta name="keywords" content="shadow, engine, shadow-engine, shadow engine, 77Z, vince">
+	<!-- Robots -->
+	<meta name="author" content="77Z">
+	<meta name="robots" content="index, follow">
+	<meta name="keywords" content="shadow, engine, shadow-engine, shadow engine, 77Z, vince">
 
-    <!-- General Meta -->
-    <meta name="language" content="English">
+	<!-- General Meta -->
+	<meta name="language" content="English">
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://77zsite.tk">
-    <meta property="og:title" content="77Z, thats me">
-    <meta property="og:description" content="I like code.">
-    <meta property="og:image" content="https://shadow.77zsite.tk/img/social-preview.png">
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://77zsite.tk">
+	<meta property="og:title" content="77Z, thats me">
+	<meta property="og:description" content="I like code.">
+	<meta property="og:image" content="https://shadow.77zsite.tk/img/social-preview.png">
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://77zsite.tk">
-    <meta property="twitter:title" content="77Z, thats me">
-    <meta property="twitter:description" content="I like code.">
-    <meta property="twitter:image" content="https://shadow.77zsite.tk/img/social-preview.png">
-    <style>
-        body,
-        html {
-            background: #222;
-            color: #fff;
-            height: 100%;
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            user-select: none;
-        }
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="https://77zsite.tk">
+	<meta property="twitter:title" content="77Z, thats me">
+	<meta property="twitter:description" content="I like code.">
+	<meta property="twitter:image" content="https://shadow.77zsite.tk/img/social-preview.png">
+	<style>
+		body,
+		html {
+			background: #222;
+			color: #fff;
+			height: 100%;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			user-select: none;
+		}
 
-        .logo-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            z-index: 1;
-        }
+		.logo-container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100%;
+			z-index: 1;
+		}
 
-        .logo-container img {
-            max-width: 400px;
-        }
+		.logo-container img {
+			max-width: 400px;
+		}
 
-        .overlay {
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            top: 0;
-            z-index: 2;
-        }
+		.overlay {
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			top: 0;
+			z-index: 2;
+		}
 
-        .social-icons {
-            position: fixed;
-            width: 100%;
-            top: 80%;
-            text-align: center;
-            z-index: 3;
-        }
+		.social-icons {
+			position: fixed;
+			width: 100%;
+			top: 80%;
+			text-align: center;
+			z-index: 3;
+		}
 
-        .social-icons img {
-            margin-right: 10px;
-        }
-    </style>
+		.social-icons img {
+			margin-right: 10px;
+		}
+
+		.body-contain {
+			background: #222;
+			color: #fff;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%
+		}
+
+		h1 {
+			font-size: 10vw;
+			font-family: sans-serif;
+			text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15)
+		}
+	</style>
+
+	<script>
+		window.onload = function () {
+			if (document.location.search !== "") {
+				// Clear the body
+				while (document.body.firstChild) document.body.removeChild(document.body.firstChild);
+
+				//Add the custom text
+				let text = document.createElement("h1");
+				let search = document.location.search;
+				// Remove first 3 chars, split by +, join with spaces
+				let sanatizedString = search.substr(3).split("+").join(" ");
+				text.appendChild(document.createTextNode(sanatizedString));
+				document.body.appendChild(text);
+
+				//Add proper styles
+				document.body.classList.add("body-contain");
+			}
+		};
+	</script>
 </head>
 
 <body>
-    <div class="logo-container">
-        <img src="res/logo.svg" alt="77Z Logo">
-    </div>
-    <div class="overlay"></div>
-    <div class="social-icons">
-        <a href="https://github.com/77Z"><img src="res/GitHubMark.svg" alt="GitHub Logo" width="50"></a>
-        <a href="https://Shadow.77Zsite.tk"><img
-                src="https://raw.githubusercontent.com/77Z/Shadow-Engine/master/media/img/icons/shadowengine.png"
-                alt="Shadow Engine Logo" width="50"></a>
-    </div>
+	<div class="logo-container">
+		<img src="res/logo.svg" alt="77Z Logo">
+	</div>
+	<div class="overlay"></div>
+	<div class="social-icons">
+		<a href="https://github.com/77Z"><img src="res/GitHubMark.svg" alt="GitHub Logo" width="50" height="50"></a>
+		<a href="https://Shadow.77Zsite.tk"><img src="res/Shadow.svg" alt="Shadow Engine Logo" width="50" height="50"></a>
+	</div>
 </body>
 
 </html>
