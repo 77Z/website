@@ -98,6 +98,11 @@
 
 	<script>
 		window.onload = function () {
+			if (document.location.href.split(":")[0] == "http") {
+				//Redirect to https manually because GitHub won't do it for me >:(
+				document.location.href = "https://77zsite.tk";
+			}
+			
 			if (document.location.search !== "") {
 				// Clear the body
 				while (document.body.firstChild) document.body.removeChild(document.body.firstChild);
