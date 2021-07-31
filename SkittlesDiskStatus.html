@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>SkittlesR</title>
+		<style>
+			body {
+				background: #222;
+				color: #fff;
+				font-family: monospace, Consolas, sans-serif;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>SkittlesR Disk Status</h1>
+		<p>
+			00 no error<br />
+			01 bad command passed to driver<br />
+			02 address mark not found or bad sector<br />
+			03 diskette write protect error<br />
+			04 sector not found<br />
+			05 fixed disk reset failed<br />
+			06 diskette changed or removed<br />
+			07 bad fixed disk parameter table<br />
+			08 DMA overrun<br />
+			09 DMA access across 64k boundary<br />
+			0A bad fixed disk sector flag<br />
+			0B bad fixed disk cylinder<br />
+			0C unsupported track/invalid media<br />
+			0D invalid number of sectors on fixed disk format<br />
+			0E fixed disk controlled data address mark detected<br />
+			0F fixed disk DMA arbitration level out of range<br />
+			10 ECC/CRC error on disk read<br />
+			11 recoverable fixed disk data error, data fixed by ECC<br />
+			20 controller error (NEC for floppies)<br />
+			40 seek failure<br />
+			80 time out, drive not ready<br />
+			AA fixed disk drive not ready<br />
+			BB fixed disk undefined error<br />
+			CC fixed disk write fault on selected drive<br />
+			E0 fixed disk status error/Error reg = 0<br />
+			FF sense operation failed<br />
+		</p>
+	</body>
+</html>
